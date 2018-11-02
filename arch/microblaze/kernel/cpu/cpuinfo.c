@@ -39,6 +39,9 @@ const struct cpu_ver_key cpu_ver_lookup[] = {
 	{"8.30.a", 0x17},
 	{"8.40.a", 0x18},
 	{"8.40.b", 0x19},
+	{"8.50.a", 0x1a},
+	{"8.50.b", 0x1c},
+	{"8.50.c", 0x1e},
 	{NULL, 0},
 };
 
