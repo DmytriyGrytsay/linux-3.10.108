@@ -394,6 +394,14 @@ config MMC_SPI
 
 	  If unsure, or if your system has no SPI master driver, say N.
 
+config MMC_MORPHOLOGIC
+	tristate "Morphologic SD/MMC Card Interface support"	
+	depends on MICROBLAZE
+	help
+	  This option enables support for MMC/SD Morphologic
+          
+          If unsure, say N.	  
+
 config MMC_S3C
 	tristate "Samsung S3C SD/MMC Card Interface support"
 	depends on ARCH_S3C24XX
