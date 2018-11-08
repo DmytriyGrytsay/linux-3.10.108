@@ -261,6 +261,15 @@
 			xlnx,tri-default = <0xffffffff>;
 			xlnx,tri-default-2 = <0xffffffff>;
 		} ;
+        gpio-leds {
+                compatible = "gpio-leds";
+
+                heartbeat {
+                        label = "Heartbeat";
+                        gpios = <&leds_8bit 1 0>;
+                        linux,default-trigger = "heartbeat";
+                };
+        } ;
 		mpmc@48000000 {
 			#address-cells = <1>;
 			#size-cells = <1>;
@@ -407,7 +416,7 @@
 		} ;
 		xps_timebase_wdt_0: xps-timebase-wdt@83a00000 {
 			clock-frequency = <62500000>;
-			compatible = "xlnx,xps-timebase-wdt-1.02.a", "xlnx,xps-timebase-wdt-1.00.a";
+			compatible = "xlnx,xps-timebase-wdt-1.02.a", "xlnx,xps-timebase-wdt-1.01.a", "xlnx,xps-timebase-wdt-1.00.a";
 			interrupt-parent = <&xps_intc_0>;
 			interrupts = < 2 0 1 2 >;
 			reg = < 0x83a00000 0x10000 >;
